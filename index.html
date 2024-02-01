@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="w3.css">
+
+<head>
+    <style>
+        body {
+            background-color: darkcyan
+        }
+
+        .item1 {
+            grid-area: header;
+        }
+
+        .item2 {
+            grid-area: menu;
+        }
+
+        .item3 {
+            grid-area: main;
+        }
+
+        .item4 {
+            grid-area: right;
+            overflow-wrap: normal;
+        }
+
+        .item5 {
+            grid-area: footer;
+        }
+
+        .item6 {
+            grid-area: right2;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header header'
+                'menu menu main main right right2'
+                'footer footer footer footer footer footer';
+            gap: 10px;
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .Tab  {
+            word-wrap: normal;
+            max-width: 500px;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="item1" style="border-radius: 15px;">10. Klasse</div>
+        <div class="item2" style="border-radius: 20px; margin-right: -1000px; margin-left: 50px; width: 250px; overflow-wrap: normal;">
+            <div class="w3-bar">
+                <h1>Kapitler</h1>
+                <button class="w3-button" onclick="OpenTab('Lejrskole')"><h5>➣ Lejrskole</h5></button><br>
+                <button class="w3-button" onclick="OpenTab('Klub')"><h5>➣ Klub</h5></button><br>
+                <button class="w3-button" onclick="OpenTab('Et anderledes år')"><h5>➣ Et anderledes år</h5></button><br>
+                <button class="w3-button" onclick="OpenTab('Skoledagen samt undervisning')"><h5>➣ Skoledagen samt undervisning</h5></button><br>
+            </div>
+        </div>
+        <div class="item3" style="border-radius: 25px;">
+            <center>
+                <div id="Lejrskole" class="Tab">
+                    <h2>Lejrskole</h2>
+                    <p style="font-size: medium; text-align: left;">i September måned tager vi på en 5 dags lejrskole til bornholm. Her bor du i små rækkehuse med 1-2 klassekammerater, hvor i selv skal sørge for morgenmad og frokost. Aftensmaden spiser vi sammen, og vi er heldige at have en køkkendame, som laver mad til os. Vores lejreskole indeholder både udflugter, hviledage og sociale aktiviteter i det omfang man kan.</p>
+                </div>
+
+                <div id="Klub" class="Tab" style="display:none;">
+                    <h2>Klub</h2>
+                    <p style="font-size: medium; text-align: left;">Nogle dage er der mulighed for at blive hængende efter skole og hygge sig med de andre elever.<br><br>
+                        Mandag til Torsdag kl. 17.30 - 21.30 er der mulighed for at komme i aftenklub sammen med sin klassekammerater og de andre unge i frydenhøj KLUB. På udvalgte dage, 1-2 gange om måmeden, vil der være en pædagog med fra klassen
+                    </p>
+                </div>
+
+                <div id="Et anderledes år" class="Tab" style="display:none">
+                    <h2>Et anderledes år</h2>
+                    <p style="font-size: medium; text-align: left;">
+                        Vi tilbyder et 10. skoleår, som bliver tilrettelagt ud fra dine ønsker. Du har mulighed for at afslutte med FP9 eller FP10 i dansk, matematik og engelsk.
+                    <br><br>
+                        Hvis du hellere vil bruge skoleåret på at blive afklaret i forhold til din fremtidlige uddannelse, så besøger vi sammen de forskellige skoler, uddannelsessteder og virksomheder. Derudover er der mulighed for at komme i skolepraktik eller brobygning på de uddannelser og skoler, som du synes er spændende, og i præcis det omfang der passer dig.
+                    <br><br>
+                        Der er også mulighed for at komme i erhvervspraktik indenfor de områder og fag, du finder interessant. Vi har et godt netværk af virksomheder, med dygtige mennesker, der glæder sig til at modtage nye praktikanter.
+                    </p>
+                </div>
+                
+                <div id="Skoledagen samt undervisning" class="Tab" style="display:none">
+                    <h2>Skoledagen samt undervisning</h2>
+                    <p style="font-size: medium; text-align: left;">
+                        Skoledagen begynder kl. 8.30, men der er
+                        allerede mulighed for at komme fra kl. 8, hvor
+                        man kan få sog en kop te og lidt morgenmad.
+                        herefter er der undervisning til kl. 14.00 og
+                        fredag til 11.45.
+                    <br><br>
+                        Du skal have undervisning i dansk, matematik
+                        og engelsk. Der vil være mulighed for at vælge
+                        tysk og fransk. Dette vil foregå på
+                        frydenhøjskolen sammen med en 9. Klasse
+                        Derudover har vi valgfag, som indeholder
+                        idræt. madkundskab og livsduelighed mm.
+                    <br><br>
+                        livsduelighed er med fokus på at være ung,
+                        det ansvar og de forpligtelser, der følger med.
+                        Vi arbejder eksempelvis med, hvordan man
+                        finder et fritidsarbejde, hvordan man får en
+                        bolig, og når man engang skal flytte
+                        hjemmefra. hvad koster det, og hvordan får 
+                        man råd til det hele? Vi arbejder også med
+                        focus på de sociale spilleregler såsom
+                        bekendtskaber, venskaber, kærester,
+                        værtskab osv.
+                    </p>
+                </div>
+            </center>
+        </div>
+        <div class="item4" style="align-items: center; width: 350px; border-radius: 20px;">
+            <h4>Tidliger elever</h4>
+
+            <div style="border: 1px solid black; margin: 10px; border-radius: 15px; margin-bottom: 5px;">
+                <br>
+                <p style="font-size: small; padding: 5px; margin-top: -40px;">"Man kan få indflydelse på sin 10. klasse. Selv være med til at bestemme målet"</p>
+                <h6>Max 16 år.</h6>
+            </div>
+
+            <div style="border: 1px solid black; margin: 10px; border-radius: 15px; margin-bottom: 5px;">
+                <br>
+                <p style="font-size: small; padding: 5px; margin-top: -40px;">"Rart at gå i 10. klasse efter et presset 9. klasses år med konstante prøver"</p>
+                <h6>Sofia 16 år.</h6>
+            </div>
+
+            <div style="border: 1px solid black; margin: 10px; border-radius: 15px; margin-bottom: 5px;">
+                <br>
+                <p style="font-size: small; padding: 5px; margin-top: -40px;">"10. klasse hjalp mig til at finde ud af, hvad jeg ville bagefter"</p>
+                <h6>Tomas 17 år.</h6>
+            </div>
+
+            <div style="border: 1px solid black; margin: 10px; border-radius: 15px; margin-bottom: 5px;">
+                <br>
+                <p style="font-size: small; padding: 5px; margin-top: -40px;">"Det var fedt at være på Lejrskole"</p>
+                <h6>Adrian 17 år.</h6>
+            </div>
+
+            <div style="border: 1px solid black; margin: 10px; border-radius: 15px; margin-bottom: 5px;">
+                <br>
+                <p style="font-size: small; padding: 5px; margin-top: -40px;">"Du kan vælge at tage eksamen, eller lade være, alt efter hvad du vil bruge dit år på"</p>
+                <h6>Rasmus 16 år.</h6>
+            </div>
+
+            <div style="border: 1px solid black; margin: 10px; border-radius: 15px; margin-bottom: 5px;">
+                <br>
+                <p style="font-size: small; padding: 5px; margin-top: -40px;">"Der er mulighed for at holde pause indenfor og udenfor. Du har dit bordtennisbord indenfor, og masser af plads udenfor"</p>
+                <h6>Max 16 år.</h6>
+                <p style="font-size: small; padding: 5px; text-align: left; width: 150px; overflow-wrap: normal;">**bordtennisbord har vi ikke mere**</p>
+            </div>
+
+        </div>
+        <div class="item5" style="border-radius: 15px;">
+            <h4>
+                Frydenhøjskolen 10KA "Pavillonen"<br>
+                location: Bødkerporten 4 2650 Hvidovre<br>
+                Kontakt: +45 61 97 16 60
+            </h4>
+        </div>
+        <div class="item6" style="align-items: center; width: 350px; margin-left: -135px; margin-right: -125px; border-radius: 20px;">
+            Hvem er vi?
+            <center>
+                <p style="font-size: medium; width: 300px;">
+                    Frydenhøjskolens 10. klasse er et tilbud til unge med autisme og andre følgediagnoser.<br><br>
+                    Frydenhøjskolens 10. klasse ligger i pavillonen ved siden af frydenhøj KLUB. Her har vi god plads, ro og mulighed for at skabedet, vi gerne vil sammen. Hos os er der plads til alle. Vi forsøger at tilpasse din skoletid efter dine ønsker og behov. Vi vil sammen med dig lægge en plan for dit skoleår. Ud fra om du ønsker at afslutte med en eksamen eller flere, eller om du ønsker fokus på andre personlige eller sociale mål.
+                </p>
+            </center>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+<script>
+    function OpenTab(cityName) {
+        var i;
+        var x = document.getElementsByClassName("Tab");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        document.getElementById(cityName).style.display = "block";
+    }
+</script>
