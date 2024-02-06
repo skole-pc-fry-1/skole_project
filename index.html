@@ -1,68 +1,75 @@
 <!DOCTYPE html>
-<html>
-
-<link rel="stylesheet" href="w3.css">
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3.css">
     <style>
         body {
-            background-color: darkcyan
-        }
-
-        .item1 {
-            grid-area: header;
-        }
-
-        .item2 {
-            grid-area: menu;
-        }
-
-        .item3 {
-            grid-area: main;
-        }
-
-        .item4 {
-            grid-area: right;
-            overflow-wrap: normal;
-        }
-
-        .item5 {
-            grid-area: footer;
-        }
-
-        .item6 {
-            grid-area: right2;
+            margin: 0;
         }
 
         .grid-container {
-            display: grid;
-            grid-template-areas:
-                'header header header header header header'
-                'menu menu main main right right2'
-                'footer footer footer footer footer footer';
-            gap: 10px;
-            background-color: lightblue;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            background-color: rgba(205, 205, 245, 0.8);
             padding: 10px;
+            min-height: 100vh;
         }
 
-        .grid-container>div {
-            background-color: rgba(255, 255, 255, 0.8);
+        .grid-item {
+            flex: 1 1 calc(25% - 20px); /* Adjust the width for 4 columns */
+            margin: 10px;
+            background-color: rgba(225, 245, 205, 0.8);
             text-align: center;
             padding: 20px 0;
             font-size: 30px;
+            border-radius: 15px;
         }
 
-        .Tab  {
+        .grid-item-full-width {
+            flex-basis: calc(100% - 20px);
+        }
+
+        .grid-item header {
+            font-size: 2em;
+        }
+
+        .Tab {
             word-wrap: normal;
+        }
+
+        .center-content {
+            text-align: center;
+        }
+
+        .center-content p {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .grid-item {
+                flex-basis: calc(50% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .grid-item {
+                flex-basis: calc(100% - 20px);
+            }
         }
     </style>
 </head>
 
-<body>
 
+<body>
     <div class="grid-container">
-        <div class="item1" style="border-radius: 15px;">10. Klasse</div>
-        <div class="item2" style="border-radius: 20px; margin-left: 50px; width: 75%; overflow-wrap: normal;">
+
+        <div class="grid-item">
             <div class="w3-bar">
                 <h1>Kapitler</h1>
                 <button class="w3-button" onclick="OpenTab('Lejrskole')"><h5>➣ Lejrskole</h5></button><br>
@@ -71,23 +78,27 @@
                 <button class="w3-button" onclick="OpenTab('Skoledagen samt undervisning')"><h5>➣ Skoledagen samt undervisning</h5></button><br>
             </div>
         </div>
-        <div class="item3" style="border-radius: 25px; width: 95%; max-width: 95%; padding: 15px;">
+        <div class="grid-item">
             <center>
+                <h1>10. Klasse</h1>
+
+                <hr>
+
                 <div id="Lejrskole" class="Tab">
                     <h2>Lejrskole</h2>
-                    <p style="font-size: medium; text-align: left;">i September måned tager vi på en 5 dags lejrskole til bornholm. Her bor du i små rækkehuse med 1-2 klassekammerater, hvor i selv skal sørge for morgenmad og frokost. Aftensmaden spiser vi sammen, og vi er heldige at have en køkkendame, som laver mad til os. Vores lejreskole indeholder både udflugter, hviledage og sociale aktiviteter i det omfang man kan.</p>
+                    <p style="font-size: medium; text-align: left; padding: 10px;">i September måned tager vi på en 5 dags lejrskole til bornholm. Her bor du i små rækkehuse med 1-2 klassekammerater, hvor i selv skal sørge for morgenmad og frokost. Aftensmaden spiser vi sammen, og vi er heldige at have en køkkendame, som laver mad til os. Vores lejreskole indeholder både udflugter, hviledage og sociale aktiviteter i det omfang man kan.</p>
                 </div>
 
                 <div id="Klub" class="Tab" style="display:none;">
                     <h2>Klub</h2>
-                    <p style="font-size: medium; text-align: left;">Nogle dage er der mulighed for at blive hængende efter skole og hygge sig med de andre elever.<br><br>
+                    <p style="font-size: medium; text-align: left; padding: 10px;">Nogle dage er der mulighed for at blive hængende efter skole og hygge sig med de andre elever.<br><br>
                         Mandag til Torsdag kl. 17.30 - 21.30 er der mulighed for at komme i aftenklub sammen med sin klassekammerater og de andre unge i frydenhøj KLUB. På udvalgte dage, 1-2 gange om måmeden, vil der være en pædagog med fra klassen
                     </p>
                 </div>
 
                 <div id="Et anderledes år" class="Tab" style="display:none">
                     <h2>Et anderledes år</h2>
-                    <p style="font-size: medium; text-align: left;">
+                    <p style="font-size: medium; text-align: left; padding: 10px;">
                         Vi tilbyder et 10. skoleår, som bliver tilrettelagt ud fra dine ønsker. Du har mulighed for at afslutte med FP9 eller FP10 i dansk, matematik og engelsk.
                     <br><br>
                         Hvis du hellere vil bruge skoleåret på at blive afklaret i forhold til din fremtidlige uddannelse, så besøger vi sammen de forskellige skoler, uddannelsessteder og virksomheder. Derudover er der mulighed for at komme i skolepraktik eller brobygning på de uddannelser og skoler, som du synes er spændende, og i præcis det omfang der passer dig.
@@ -95,10 +106,10 @@
                         Der er også mulighed for at komme i erhvervspraktik indenfor de områder og fag, du finder interessant. Vi har et godt netværk af virksomheder, med dygtige mennesker, der glæder sig til at modtage nye praktikanter.
                     </p>
                 </div>
-                
+
                 <div id="Skoledagen samt undervisning" class="Tab" style="display:none">
                     <h2>Skoledagen samt undervisning</h2>
-                    <p style="font-size: medium; text-align: left;">
+                    <p style="font-size: medium; text-align: left; padding: 10px;">
                         Skoledagen begynder kl. 8.30, men der er
                         allerede mulighed for at komme fra kl. 8, hvor
                         man kan få sog en kop te og lidt morgenmad.
@@ -126,8 +137,8 @@
                 </div>
             </center>
         </div>
-        <div class="item4" style="align-items: center; width: 70%; border-radius: 20px; margin-left: 15%;">
-            <h4>Tidliger elever</h4>
+        <div class="grid-item">
+            <h4>Tidligere elever</h4>
 
             <div style="border: 1px solid black; margin: 10px; border-radius: 15px; margin-bottom: 5px;">
                 <br>
@@ -166,38 +177,40 @@
                 <p style="font-size: small; padding: 5px; text-align: left; width: 150px; overflow-wrap: normal;">**bordtennisbord har vi ikke mere**</p>
             </div>
 
+            <!-- Add other items as needed -->
+
         </div>
-        <div class="item5" style="border-radius: 15px;">
-            <h4>
-                Frydenhøjskolen 10KA "Pavillonen"<br>
-                location: Bødkerporten 4 2650 Hvidovre<br>
-                Kontakt: +45 61 97 16 60
-            </h4>
-        </div>
-        <div class="item6" style="align-items: center; border-radius: 20px; width: 100%;">
-            Hvem er vi?
+        
+        <div class="grid-item">
+            <h4>Hvem er vi?</h4>
             <center>
                 <p style="font-size: medium; width: 90%;">
                     Frydenhøjskolens 10. klasse er et tilbud til unge med autisme og andre følgediagnoser.<br><br>
                     Frydenhøjskolens 10. klasse ligger i pavillonen ved siden af frydenhøj KLUB. Her har vi god plads, ro og mulighed for at skabedet, vi gerne vil sammen. Hos os er der plads til alle. Vi forsøger at tilpasse din skoletid efter dine ønsker og behov. Vi vil sammen med dig lægge en plan for dit skoleår. Ud fra om du ønsker at afslutte med en eksamen eller flere, eller om du ønsker fokus på andre personlige eller sociale mål.
                 </p>
             </center>
-
         </div>
+        
+        <div class="grid-item">
+            <h4>
+                Frydenhøjskolen 10KA "Pavillonen"<br>
+                location: Bødkerporten 4 2650 Hvidovre<br>
+                Kontakt: +45 61 97 16 60
+            </h4>
+        </div>
+
     </div>
 
+    <script>
+        function OpenTab(TabName) {
+            var i;
+            var x = document.getElementsByClassName("Tab");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(TabName).style.display = "block";
+        }
+    </script>
 </body>
 
 </html>
-
-
-<script>
-    function OpenTab(cityName) {
-        var i;
-        var x = document.getElementsByClassName("Tab");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        document.getElementById(cityName).style.display = "block";
-    }
-</script>
