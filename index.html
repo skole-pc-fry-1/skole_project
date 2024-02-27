@@ -28,8 +28,8 @@
         }
 
         #modalContent img {
-            width: 80%;
-            height: 80%;
+            width: 90%;
+            height: 90%;
             object-fit: contain;
         }
 
@@ -91,6 +91,7 @@
         
                 <div class="w3-bar">
                     <h1>Kapitler</h1>
+                    <button class="w3-button" onclick="OpenTab('hvem er vi')"><h5>➣ Hvem er vi</h5></button><br>
                     <button class="w3-button" onclick="OpenTab('Lejrskole')"><h5>➣ Lejrskole</h5></button><br>
                     <button class="w3-button" onclick="OpenTab('Klub')"><h5>➣ Klub</h5></button><br>
                     <button class="w3-button" onclick="OpenTab('Et anderledes år')"><h5>➣ Et anderledes år</h5></button><br>
@@ -107,7 +108,16 @@
 
                         <hr>
 
-                        <div id="Lejrskole" class="Tab">
+
+                        <div id="hvem er vi" class="Tab">
+                            <h2>Hvem er vi</h2>
+                            <p style="font-size: medium; width: 90%;">
+                                Frydenhøjskolens 10. klasse er et tilbud til unge med autisme og andre følgediagnoser.<br><br>
+                                Frydenhøjskolens 10. klasse ligger i pavillonen ved siden af frydenhøj KLUB. Her har vi god plads, ro og mulighed for at skabedet, vi gerne vil sammen. Hos os er der plads til alle. Vi forsøger at tilpasse din skoletid efter dine ønsker og behov. Vi vil sammen med dig lægge en plan for dit skoleår. Ud fra om du ønsker at afslutte med en eksamen eller flere, eller om du ønsker fokus på andre personlige eller sociale mål.
+                            </p>
+                        </div>
+
+                        <div id="Lejrskole" class="Tab" style="display:none;">
                             <h2>Lejrskole</h2>
                             <p style="font-size: medium; text-align: left; padding: 10px;">i September måned tager vi på en 5 dags lejrskole til bornholm. Her bor du i små rækkehuse med 1-2 klassekammerater, hvor i selv skal sørge for morgenmad og frokost. Aftensmaden spiser vi sammen, og vi er heldige at have en køkkendame, som laver mad til os. Vores lejreskole indeholder både udflugter, hviledage og sociale aktiviteter i det omfang man kan.</p>
                         </div>
@@ -220,16 +230,7 @@
             <!-- Add other items as needed -->
 
         </div>
-        
-        <div class="grid-item">
-            <h4>Hvem er vi?</h4>
-            <center>
-                <p style="font-size: medium; width: 90%;">
-                    Frydenhøjskolens 10. klasse er et tilbud til unge med autisme og andre følgediagnoser.<br><br>
-                    Frydenhøjskolens 10. klasse ligger i pavillonen ved siden af frydenhøj KLUB. Her har vi god plads, ro og mulighed for at skabedet, vi gerne vil sammen. Hos os er der plads til alle. Vi forsøger at tilpasse din skoletid efter dine ønsker og behov. Vi vil sammen med dig lægge en plan for dit skoleår. Ud fra om du ønsker at afslutte med en eksamen eller flere, eller om du ønsker fokus på andre personlige eller sociale mål.
-                </p>
-            </center>
-        </div>
+
         
         <div class="grid-item">
             <h4>
